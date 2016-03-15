@@ -7,18 +7,19 @@ import time
 import os
 
 # Server
-if len(sys.argv) != 2:
+"""if len(sys.argv) != 2:
     print("Use : {} <port>".format(sys.argv[0]))
-    sys.exit(1)
+    sys.exit(1)"""
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 BUFFER_SIZE = 20
 
-port = int(sys.argv[1])
+# port = int(sys.argv[1])
+port = 8000
 sock.bind(('', port))
 sock.listen(5)
-print("Server running on port {} ...".format(sys.argv[1]))
+print("Server running on port {} ...".format(port))
 
 
 # Initialisation des users : liste vide
